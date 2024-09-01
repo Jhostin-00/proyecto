@@ -1,0 +1,145 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté siempre por encima del contenido */
+}
+
+header button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* Limita el ancho máximo del contenido principal */
+    box-sizing: border-box;
+    margin: 100px auto 20px; /* Añade un margen superior para evitar que el contenido se superponga con el header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 100px); /* Asegura que el contenido ocupe al menos toda la altura de la pantalla, menos el tamaño del header */
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+#task-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li button {
+    background-color: #4CAF50; /* Color de fondo para el botón "Ver" */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list li button.delete {
+    background-color: #f44336; /* Color de fondo para el botón "Borrar" */
+}
+
+#task-list li button:hover {
+    opacity: 0.8; /* Efecto al pasar el mouse por encima */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header, main {
+        padding: 10px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+    }
+}
+
+
+.back-button {
+    background-color: #555; /* Color de fondo del botón "Volver" */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    opacity: 0.8; /* Efecto al pasar el mouse por encima */
+}

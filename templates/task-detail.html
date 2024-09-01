@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Task Detail</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Detalles de la tarea</h1>
+    </header>
+    <main>
+        <form id="task-detail-form">
+            <label for="task-name">Nombre de la tarea:</label>
+            <input type="text" id="task-name" name="taskName">
+
+            <label for="task-desc">Descripcion:</label>
+            <textarea id="task-desc" name="taskDesc"></textarea>
+
+            <label for="task-date">Fecha de creacion:</label>
+            <input type="date" id="task-date" name="taskDate">
+
+            <button type="button" onclick="saveTaskDetails()">Guardar</button>
+
+            <button type="button" class="back-button" onclick="goBack()">Volver</button>
+        </form>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>
