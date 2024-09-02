@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List - Home</title>
-    <link rel="stylesheet" href="/css/style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header>
@@ -12,10 +13,12 @@
         <button onclick="location.href='/api/create_task'">Añade una nueva Task</button>
     </header>
     <main>
-        <ul id="task-list">
-            <!-- List of tasks will be dynamically added here -->
+        <ul>
+            {% for name in names %}
+            <li>{{ name }}</li>
+            {% endfor %}
         </ul>
     </main>
-    <script src="/js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

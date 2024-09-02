@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Task
 from .serializers import TaskSerializer
 from rest_framework.response import Response
 from rest_framework import generics, status
@@ -82,4 +83,12 @@ def register(request):
     
 def index(request):
     if request.method == 'GET':
-        return render(request, 'index.html')
+
+        tasks = Task.objects.all()
+        names = [task.name for task in tasks]
+        
+        return render(request, 'index.html', {'names': names})
+    
+def task_detail(request):
+    if request.method == 'GET':
+        return render(request, 'task_detail.html')
